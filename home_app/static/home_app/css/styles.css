@@ -1,8 +1,19 @@
 body{
-  overflow-x: hidden;
   font-family: 'Montserrat' sans-serif;
 }
 
+@media only screen and (min-width:1200px){
+	.nav-item > .nav-link{padding: 5px 20px !important;
+		display: block !important;}
+}
+
+@media only screen and (max-width:992px){
+	.header-inner{background-color: rgb(20, 65, 140)!important;
+	}
+	.nav-item > .nav-link{
+		color: white!important}
+
+}
 
 /* ---------------------- NAVBAR ---------------------- */
 
