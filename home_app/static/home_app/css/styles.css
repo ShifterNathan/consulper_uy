@@ -1,8 +1,21 @@
 body{
-  overflow-x: hidden;
   font-family: 'Montserrat' sans-serif;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
+@media only screen and (min-width:1200px){
+	.nav-item > .nav-link{padding: 5px 20px !important;
+		display: block !important;}
+}
+
+@media only screen and (max-width:992px){
+	.header-inner{background-color: rgb(20, 65, 140)!important;
+	}
+	.nav-item > .nav-link{
+		color: white!important}
+
+}
 
 /* ---------------------- NAVBAR ---------------------- */
 
@@ -150,10 +163,8 @@ background-color: transparent;
 
 /* ---------------------- Contacto ---------------------- */
 
-.form-group{
+.contact-div{
   background-color: rgb(20, 65, 140);
-  width: 50%;
-  margin: auto;
   border-radius: 5px;
   padding: 10px 0px;
   text-align: center;
@@ -179,9 +190,9 @@ background-color: transparent;
   
 }
 
-.form-control{
+/*.form-control{
   margin: -10px;
-}
+}*/
 
 
 #contact .btn-primary {
