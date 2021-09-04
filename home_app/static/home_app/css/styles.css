@@ -4,19 +4,6 @@ body{
   padding-bottom: 0;
 }
 
-@media only screen and (min-width:1200px){
-	.nav-item > .nav-link{padding: 5px 20px !important;
-		display: block !important;}
-}
-
-@media only screen and (max-width:992px){
-	.header-inner{background-color: rgb(20, 65, 140)!important;
-	}
-	.nav-item > .nav-link{
-		color: white!important}
-
-}
-
 /* ---------------------- NAVBAR ---------------------- */
 
 .header{position: relative;
@@ -28,7 +15,7 @@ top: 0;
 left: 0;
 width:100%;
 z-index: 99;
-background-color: transparent;
+background-color: rgba(0, 0, 0, 0.4)
 }
 
 
@@ -58,7 +45,7 @@ background-color: transparent;
   position: fixed;
   top:0;
   z-index: 99;
-  box-shadow:0px 1px 10px rgba(0,0,0,0.4);
+  box-shadow:0px 1px 10px rgb(0,0,0);
   transition-duration: 0.6s; }
   
 .navbar-scroll .nav-item .nav-link{color: white;
@@ -103,7 +90,6 @@ background-color: transparent;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .carousel-item::before{
@@ -126,7 +112,7 @@ background-color: transparent;
   text-shadow: .1rem .1rem .8rem black;
 }
 
-/*---Change Carousel Transition Speed --*/
+/*--- Efecto de transición del carrusel --*/
 .carousel-item-next, .carousel-item-prev, .carousel-item.active {
   display: block;
   transition: -webkit-transform 1.2s ease;
@@ -134,14 +120,10 @@ background-color: transparent;
   transition: transform 1.2s ease,-webkit-transform 1.2s ease;
 }
 
+/* ---------------------- Génericos de la página de inicio ---------------------- */
 
-
-/* ---------------------- Fin del carrusel ---------------------- */
-
-.card-img-top {
-  width: 100%;
-  height: 15vw;
-  object-fit: cover;
+.card img {
+  height: 240px;
 }
 
 
@@ -155,13 +137,93 @@ background-color: transparent;
   min-height:100px;
 }
 
-/* ---------------------- Contacto ---------------------- */
+/* ---------------------- Servicios ---------------------- */
 
-#services .card img {
-  height: 240px;
+.container.gallery-container {
+  background-color: #fff;
+  color: #35373a;
+  min-height: 100vh;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
 }
 
+
+.gallery-container .page-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 25px auto;
+  font-size: 18px;
+}
+
+.tz-gallery {
+  padding: 40px;
+}
+
+.tz-gallery .lightbox img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 30px;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+
+.tz-gallery .lightbox img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.tz-gallery img {
+  border-radius: 4px;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+
 /* ---------------------- Contacto ---------------------- */
+
+.contact-div {
+  margin-top: 2rem;
+}
+
+.content-banner{color: #ffffff;
+  background-image: url(./img/banner.png);
+  min-height:400px;
+  height:100%;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 125px;
+  }
+  
+  .content-banner:before{position:absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color:rgba(57,49,49,0.7);
+  top:0;
+  left: 0;
+  z-index: 1;}
+  
+  .content-banner .first-title{font-size: 44px;
+  font-weight: 400;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+  margin:0px 0px 12px;}
+  
+  .content-banner .banner-des{font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0;
+  position: relative;
+  z-index: 2;
+  font-weight: 400;
+  margin-top: 0;}
+
+/* ---------------------- Formulario de contacto ---------------------- */
 
 .contact-div{
   background-color: rgb(20, 65, 140);

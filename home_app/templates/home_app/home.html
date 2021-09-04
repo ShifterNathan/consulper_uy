@@ -8,48 +8,46 @@
     <!---------------------- Carrusel ------------------------>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" id="start">
         <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="3000">              
-            <img src="{% static 'home_app/img/carrusel_metal.jpg' %}" class="d-block w-100">
-            <div class="carousel-caption text-center">
-            <h3>Revestimientos</h3>
-            <p>De los más altos estándares</p>
-            <a class="btn btn-outline-light btn-lg" href="#services">Ver Servicios</a>
+            <div class="carousel-item active" data-bs-interval="3000">              
+                <img src="{% static 'home_app/img/carrusel_metal.jpg' %}" class="d-block w-100">
+                <div class="carousel-caption text-center">
+                    <h3>Revestimientos</h3>
+                    <p>De los más altos estándares</p>
+                    <a class="btn btn-outline-light btn-lg" href="#services">Ver Servicios</a>
+                </div>
             </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'home_app/img/carrusel_piso.jpg' %}" class="d-block w-100">
-            <div class="carousel-caption text-center">
-            <h3>Pisos</h3>
-            <p>Amplia durabilidad</p>
-            <a class="btn btn-outline-light btn-lg" href="#services">Ver Servicios</a>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="{% static 'home_app/img/carrusel_piso.jpg' %}" class="d-block w-100">
+                <div class="carousel-caption text-center">
+                    <h3>Pisos</h3>
+                    <p>Amplia durabilidad</p>
+                    <a class="btn btn-outline-light btn-lg" href="#services">Ver Servicios</a>
+                </div>
             </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'home_app/img/carrusel_piso1.jpg' %}" class="d-block w-100">
-            <div class="carousel-caption text-center">
-            <h3>Obras civiles</h3>
-            <p>De todo tipo</p>
-            <a class="btn btn-outline-light btn-lg" href="#services">Ver Servicios</a>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="{% static 'home_app/img/carrusel_piso1.jpg' %}" class="d-block w-100">
+                <div class="carousel-caption text-center">
+                    <h3>Obras civiles</h3>
+                    <p>De todo tipo</p>
+                    <a class="btn btn-outline-light btn-lg" href="#services">Ver Servicios</a>
+                </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-        </button>
     </div>
     <!---------------------- Fin de Carrusel ------------------------>
-    </div>
-
 
     <!---------------------- Tarjetas de categorías ------------------------>
     <div id="services">
@@ -69,8 +67,7 @@
                     </div>
                     <div class="card-text">
                         <p>{{category.description}}</p>
-                    </div>
-                    
+                    </div> 
                 </div>
                 <a href="{% url 'Services' %}" class="btn btn-outline-primary rounded-5">Ver más</a>
             </div>

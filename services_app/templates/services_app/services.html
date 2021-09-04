@@ -1,0 +1,51 @@
+{% extends "home_app/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+
+<div id="sidebar">
+    <br>
+    <br>
+    <h3>Categories</h3>
+        <ul>
+        {% for c in categories %}
+            <li>
+           <h4><a href="{{ c.get_absolute_url }}">{{ c.name }}</a></h4>
+            </li>
+        {% endfor %}
+        </ul>
+</div><br>
+<div>
+    <h1>{% if category %}{{ category.name }}{% endif %}</h1>
+    {% for service in services %}
+        <img src="{{service.image.url}}">
+    {% endfor %}
+</div>
+
+<!-- 
+    <p class="page-description text-center">Grid Layout With Zoom Effect</p>
+    <div class="tz-gallery">
+        <div class="row">
+
+            {% for service in services %}
+            <p class="page-description text-center">Grid Layout With Zoom Effect</p>
+            <div class="col-lg-4 col-md-4">
+                <a class="lightbox" href="{{service.image.url}}">
+                    <img src="{{service.image.url}}">
+                </a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+    -->
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+
+{% endblock %}
