@@ -11,6 +11,7 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="3000">              
@@ -30,10 +31,18 @@
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-                <img src="{% static 'home_app/img/carrusel_piso1.jpg' %}" class="d-block w-100">
+                <img src="{% static 'home_app/img/carrusel_civil.jpg' %}" class="d-block w-100">
                 <div class="carousel-caption text-center">
                     <h3>Obras civiles</h3>
                     <p>De todo tipo</p>
+                    <a class="btn btn-outline-light btn-lg" href="#services">Ver Servicios</a>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="{% static 'home_app/img/carrusel_prfv.jpg' %}" class="d-block w-100">
+                <div class="carousel-caption text-center">
+                    <h3>Perfiles en PRFV</h3>
+                    <p>¡Somos fabricantes!</p>
                     <a class="btn btn-outline-light btn-lg" href="#services">Ver Servicios</a>
                 </div>
             </div>
@@ -98,22 +107,22 @@
     <h1 class="text-dark pt-3">Algunos de nuestros clientes</h1>
     <div class="heading-underline w-25 mt-3"></div>
     </div>
-    <div class="row mb-3 align-items-center" id="brands">
-    <div class="col-lg-2 col-md-4 col-sm-4 text-center">
-        <img src="{% static 'home_app/img/conaprole.png' %}">
-    </div>
-    <div class="col-lg-2 col-md-3 col-sm-4 text-center">
-        <img  src="{% static 'home_app/img/ancap.png' %}">
-    </div>
-    <div class="col-lg-3 col-md-5 col-sm-4 text-center">
-        <img src="{% static 'home_app/img/miem.png' %}">
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-        <img  src="{% static 'home_app/img/malteria.png' %}">
-    </div>
-    <div class="col-lg-2 col-md-6 col-sm-6 text-center">         
-        <img  src="{% static 'home_app/img/anep.png' %}">          
-    </div>
+    <div class="row mb-3" id="brands">
+        <div class="col-lg-2 col-md-4 col-sm-4 text-center">
+            <img src="{% static 'home_app/img/conaprole.png' %}">
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 text-center">
+            <img  src="{% static 'home_app/img/ancap.png' %}">
+        </div>
+        <div class="col-lg-3 col-md-5 col-sm-4 text-center">
+            <img src="{% static 'home_app/img/miem.png' %}">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+            <img  src="{% static 'home_app/img/malteria.png' %}">
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6 text-center">         
+            <img  src="{% static 'home_app/img/anep.png' %}">          
+        </div>
     </div>
 
 {% endblock %}

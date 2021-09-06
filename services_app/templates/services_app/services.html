@@ -6,43 +6,63 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
 
-<div id="sidebar">
-    <br>
-    <br>
-    <h3>Categories</h3>
-        <ul>
-        {% for c in categories %}
-            <li>
-           <h4><a href="{{ c.get_absolute_url }}">{{ c.name }}</a></h4>
-            </li>
-        {% endfor %}
-        </ul>
-</div><br>
-<div>
-    <h1>{% if category %}{{ category.name }}{% endif %}</h1>
-    {% for service in services %}
-        <img src="{{service.image.url}}">
-    {% endfor %}
-</div>
 
-<!-- 
-    <p class="page-description text-center">Grid Layout With Zoom Effect</p>
+    
+<br><br><br><br>
+<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="class_nav">
+    <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categories_responsive" aria-controls="categories_responsive" aria-expanded="false" aria-label="Desplazo de navegación">
+        <span class="navbar-toggler-icon"></span> 
+    </button>
+    <div class="collapse navbar-collapse" id="categories_responsive">
+        <div class="row mb-3" id="services">
+            <ul class="navbar-nav mx-auto">
+                {% for c in categories %}
+                <li class="nav-item">
+                <h4><a class="nav-link text-center" href="{{ c.get_absolute_url }}">{{ c.name }}</a></h4>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    </div>
+</nav><br>
+
+
+
+<section class="content-banner">
+
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-12">
+          <div class="banner-con text-center">
+            <a href="#" target="_blank" class="banner-btn">Get started for free</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div class="services">
+    <h1 class="text-center">{% if category %}{{ category.name }}</h1>
+    <p class="page-description text-center">{{ category.content }}</p>
+    <h1 class="text-center">{% else %}Todos nuestros servicios{% endif %}</h1>
     <div class="tz-gallery">
         <div class="row">
-
             {% for service in services %}
-            <p class="page-description text-center">Grid Layout With Zoom Effect</p>
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 ">
+                <h6 class="text-center">{{service.title}}</h6>
                 <a class="lightbox" href="{{service.image.url}}">
-                    <img src="{{service.image.url}}">
+                    <img src="{{service.image.url}}" alt="Park">
                 </a>
             </div>
             {% endfor %}
-
-        </div>
+        </div> 
     </div>
-    -->
-</div>
+</div>  
+<br><br><br>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
 <script>
     baguetteBox.run('.tz-gallery');
